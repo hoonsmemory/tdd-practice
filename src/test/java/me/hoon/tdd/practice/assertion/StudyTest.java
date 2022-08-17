@@ -1,4 +1,4 @@
-package me.hoon.tdd.practice.study;
+package me.hoon.tdd.practice.assertion;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

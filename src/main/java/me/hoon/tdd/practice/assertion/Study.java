@@ -1,4 +1,4 @@
-package me.hoon.tdd.practice.study;
+package me.hoon.tdd.practice.assertion;
 
 public class Study {
 
