@@ -6,12 +6,27 @@ public class Study {
 
     private int limit;
 
+    private String name;
+
     public Study(int limit) {
-        if ( limit > 0) {
+        if ( limit < 0) {
             throw new IllegalArgumentException("0보다 작을 수 없습니다.");
         }
 
         this.limit = limit;
+    }
+
+    public Study(int limit, String name) {
+        if ( limit < 0) {
+            throw new IllegalArgumentException("0보다 작을 수 없습니다.");
+        }
+
+        if ( name == null & "".equals(name)) {
+            throw new IllegalArgumentException("0보다 작을 수 없습니다.");
+        }
+
+        this.limit = limit;
+        this.name = name;
     }
 
     public StudyStatus getStatus() {
@@ -19,6 +34,19 @@ public class Study {
     }
 
     public int getLimit() {
-        return 0;
+        return this.limit;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Study{" +
+                "studyStatus=" + studyStatus +
+                ", limit=" + limit +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
