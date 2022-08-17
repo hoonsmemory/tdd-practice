@@ -8,6 +8,8 @@ import static org.junit.jupiter.api.Assumptions.*;
 /**
  * assumeTrue(조건)         : 조건이 맞지 않으면 이하 코드는 실행이 안된다.
  * assumingThat(조건, 테스트) : 조건이 맞을 경우 테스트 코드가 실행된다.
+ * @EnabledOnOS, @EnabledOnJre,...   : 조건에 맞을 경우 코드 실행
+ * @DisabledOnOS, @DisabledOnJre,... : 조건에 맞을 경우 코드 실행 안함
  */
 class AssumeTest {
 
