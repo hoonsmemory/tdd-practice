@@ -1,4 +1,4 @@
-package me.hoon.tdd.practice;
+package me.hoon.tdd.practice.basic;
 
 import org.junit.jupiter.api.*;
 
