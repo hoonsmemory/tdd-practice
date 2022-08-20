@@ -36,7 +36,7 @@ public class VerifyTest {
     StudyRepository studyRepository;
 
     @Test
-    @DisplayName("Mock 객체 Stubbing 테스트")
+    @DisplayName("verify 테스트")
     void test() {
         StudyService studyService = new StudyService(memberService, studyRepository);
         assertNotNull(studyService);
