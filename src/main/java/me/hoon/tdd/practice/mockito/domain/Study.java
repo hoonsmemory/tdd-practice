@@ -18,4 +18,7 @@ public class Study {
         this.owner = owner;
     }
 
+    public Member getOwner() {
+        return owner;
+    }
 }
