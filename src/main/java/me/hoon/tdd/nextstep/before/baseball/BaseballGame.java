@@ -17,7 +17,7 @@ public class BaseballGame {
         return numbers;
     }
 
-    public boolean play(int[] randomNum) {
+    public void play(int[] randomNum) {
         boolean isFail = true;
         InputView inputView = new InputView();
         ResultView resultView = new ResultView();
@@ -28,11 +28,11 @@ public class BaseballGame {
             int ball = 0;
 
             for(int i = 0; i < inputNum.length; i++) {
-                strike += getStrike(randomNum[i], inputNum[i]);
+                strike += getStrikeOrBall(randomNum[i], inputNum[i]);
 
                 for(int j = 0; j < inputNum.length; j++) {
                     if(i != j) {
-                        ball += getBall(randomNum[i], inputNum[j]);
+                        ball += getStrikeOrBall(randomNum[i], inputNum[j]);
                     }
                 }
             }
@@ -43,33 +43,17 @@ public class BaseballGame {
                 isFail = false;
             }
         }
-
-        return isFail;
     }
 
-    private int getStrike(int randomNum, int inputNum) {
-        int strike = 1;
+    private int getStrikeOrBall(int randomNum, int inputNum) {
+        int strikeOrBall = 1;
         int nothing = 0;
 
         if(randomNum == inputNum) {
-            return strike;
+            return strikeOrBall;
         }
 
         return nothing;
     }
-
-    private int getBall(int randomNum, int inputNum) {
-        int ball = 1;
-        int nothing = 0;
-
-        if(randomNum == inputNum) {
-            return ball;
-        }
-
-        return nothing;
-    }
-
-
-
 
 }
